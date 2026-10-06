@@ -36,6 +36,18 @@ document.getElementById('theme-toggle').addEventListener('click', () => {
   saveTheme(dark ? 'dark' : 'light');
 });
 
+// Back to top: shown once the hero has scrolled fully out of view above the viewport.
+const backToTop = document.getElementById('back-to-top');
+
+new IntersectionObserver(([entry]) => {
+  backToTop.hidden = entry.isIntersecting || entry.boundingClientRect.top > 0;
+}).observe(document.getElementById('hero'));
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0 });
+  document.getElementById('hero').focus({ preventScroll: true });
+});
+
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) node.className = className;
