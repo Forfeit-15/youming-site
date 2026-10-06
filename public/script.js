@@ -1,6 +1,40 @@
 const GITHUB_USER = 'Forfeit-15';
 
+const THEME_KEY = 'theme';
+
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Dark mode: a 'dark' class on <body>, remembered for the browser session.
+function readTheme() {
+  try {
+    return sessionStorage.getItem(THEME_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    sessionStorage.setItem(THEME_KEY, theme);
+  } catch {
+    // Storage blocked: the toggle still works, it just isn't remembered.
+  }
+}
+
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  const button = document.getElementById('theme-toggle');
+  button.setAttribute('aria-pressed', String(dark));
+  button.textContent = dark ? 'Light mode' : 'Dark mode';
+}
+
+applyTheme(readTheme() === 'dark');
+
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  const dark = !document.body.classList.contains('dark');
+  applyTheme(dark);
+  saveTheme(dark ? 'dark' : 'light');
+});
 
 function el(tag, className, text) {
   const node = document.createElement(tag);
