@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yeo You Ming | Portfolio</title>
+  <meta name="description" content="Portfolio of Yeo You Ming, ICT student at the Singapore Institute of Technology.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="nav-brand" href="#hero">Yeo You Ming</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#repos">Repos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Yeo You Ming</h1>
+        <!-- TODO: replace with your own tagline -->
+        <p class="tagline">ICT student at SIT building fast, well-tested software.</p>
+        <ul class="link-row">
+          <!-- TODO: replace with the email you want public -->
+          <li><a class="btn btn-primary" href="mailto:you@example.com">Email</a></li>
+          <li><a class="btn" href="https://github.com/Forfeit-15">GitHub</a></li>
+          <!-- TODO: replace with your LinkedIn URL -->
+          <li><a class="btn" href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2>About</h2>
+        <!-- TODO: replace with your own bio -->
+        <p>I'm a Year 3 Information and Communications Technology student at the Singapore Institute of Technology. I enjoy finding out why software is slow and making it faster, and I care about testing and shipping changes safely.</p>
+        <p>I'm looking for internship and graduate roles in software engineering.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h2>Skills</h2>
+        <!-- TODO: adjust to your real skills -->
+        <ul class="chips">
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Kotlin / Android</li>
+          <li>C#</li>
+          <li>Performance profiling</li>
+          <li>Software testing</li>
+          <li>Git and CI/CD</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <!-- TODO: replace with your own projects and links -->
+        <div class="grid">
+          <article class="card">
+            <h3>Steganography Tool</h3>
+            <p>A Python tool for hiding and recovering messages inside image files.</p>
+            <a href="https://github.com/Forfeit-15">View on GitHub</a>
+          </article>
+          <article class="card">
+            <h3>Performance Optimisation Project</h3>
+            <p>Profiled and load-tested a Python service, then cut its response time using the measurements.</p>
+            <a href="https://github.com/Forfeit-15">View on GitHub</a>
+          </article>
+          <article class="card">
+            <h3>Agent-built Portfolio</h3>
+            <p>This site: built by one AI agent, tested by another, and shipped through pull requests and CI.</p>
+            <a href="https://github.com/Forfeit-15/youming-site">View on GitHub</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="repos" class="section alt">
+      <div class="container">
+        <h2>GitHub Repositories</h2>
+        <p class="muted">My most recently updated public repositories.</p>
+        <div id="repo-list" class="grid" aria-live="polite">
+          <p class="muted">Loading repositories…</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2>Contact</h2>
+        <p>The best way to reach me is by email. I'm also on GitHub and LinkedIn.</p>
+        <ul class="link-row">
+          <!-- TODO: keep in sync with the hero links -->
+          <li><a class="btn btn-primary" href="mailto:you@example.com">Email</a></li>
+          <li><a class="btn" href="https://github.com/Forfeit-15">GitHub</a></li>
+          <li><a class="btn" href="https://www.linkedin.com/in/your-profile">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Yeo You Ming</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
